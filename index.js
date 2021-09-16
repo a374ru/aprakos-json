@@ -11,7 +11,7 @@ const fs = require('fs');
 */
 
 // Динамические сегменты пути
-var url1 = 'https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/' // можно заменить на `localhost` если проект склонирован
+var url1 = 'http://localhost:3000/currentday/APRAKOS/' // можно заменить на `webhost` 
 var sed = 1;
 let slash = "/";
 var weekDay = 1;
