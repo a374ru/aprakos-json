@@ -11,7 +11,7 @@ const fs = require('fs');
 */
 
 // Динамические сегменты пути
-var url1 = 'https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/' // можно заменить на web-URL
+var url1 = 'https://a374ru.github.io/aprakos.ru/currentday/APRAKOS/' // можно заменить на `localhost` если проект склонирован
 var sed = 1;
 let slash = "/";
 var weekDay = 1;
@@ -25,8 +25,7 @@ arrayJson = [];
 function rec() {
 
 	// Условие при котором сегмент URL дня возвращается к единице и седмица увеличивается на единицу
-	if (weekDay == 8) 
-	{
+	if (weekDay == 8) {
 		weekDay = 1;
 		sed = sed + 1;
 	}
@@ -35,8 +34,7 @@ function rec() {
 	var url = url1 + sed + slash + weekDay + ext
 
 	// Запрос ресурса по URL
-	workBox(url).then(function(param)
-	{
+	workBox(url).then(function (param) {
 
 		// Ограничение по id в соответствии с допустимым диапазоном
 		if (id == 507) {
